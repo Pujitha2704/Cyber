@@ -1,71 +1,57 @@
-Image Steganography with Python
+# Steganography
+Image Steganography – Hide Data Inside Images
 
-This project demonstrates how to conceal and retrieve secret messages within images using Python's OpenCV library. It employs the Least Significant Bit (LSB) technique to embed text into an image, ensuring minimal alteration to the original visual content.
+📌 Project Overview
 
-Features
+This project implements image steganography, a technique for securely hiding secret messages within digital images. By modifying pixel values, the project ensures data remains concealed while maintaining the original image's appearance. It provides a simple yet effective way to prevent hackers from intercepting sensitive information.
 
-Message Embedding: Hide a secret message within an image by modifying its pixel values.
+🚀 Features
 
-Password Protection: Secure the hidden message with a user-defined passcode.
+✅ Securely hides text messages within an image
 
-Message Extraction: Retrieve and display the concealed message from the image using the correct passcode.
+✅ Password protection for message decryption
 
+✅ Minimal distortion in the stego-image
 
-Requirements
+✅ Supports multiple image formats (JPG, PNG, BMP)
 
-Python 3.13.2
+✅ Lightweight and easy-to-use
 
-OpenCV (opencv-python)
+🛠 Technologies Used
 
-NumPy
+Programming Language: Python
 
+Libraries: OpenCV (cv2), NumPy, OS
 
-Installation
+Security Mechanism: Password Authentication
 
-1. Clone the repository:
+🛠 How It Works
 
-https://github.com/Pujitha2704/Cyber/tree/main
+Encryption:
 
+The user enters a secret message and passcode.
+The message is converted into ASCII values and embedded into the image pixels.
+A modified image is generated with hidden data.
 
-2. Install the required packages:
+Decryption:
 
-pip install opencv-python numpy
+The user provides the encrypted image and correct passcode.
+The program extracts hidden text from the image.
+If the passcode is incorrect, access is denied.
 
+📌 Future Scope
 
+🔹 Integration with AES/RSA encryption for enhanced security
 
-Usage
+🔹 AI-based steganography to improve data hiding efficiency
 
-1. Prepare an Image:
+🔹 Support for audio/video steganography
 
-Place the image (e.g., mypic.jpg) in the script's directory.
+🔹 Cloud-based secure data sharing system
 
+📜 License
 
+This project is open-source and available under the MIT License.
 
-2. Run the Script:
-
-https://github.com/satyam2003-cpu/myproject/blob/main/stego.py
-
-
-3. Follow the Prompts:
-
-Encoding: Enter the secret message and a passcode to embed the message into the image, which will be saved as encryptedImage.jpg.
-
-Decoding: Provide the correct passcode to retrieve and display the hidden message.
-
-
-
-
-Methodology
-
-The script utilizes the Least Significant Bit (LSB) technique for steganography. This method involves modifying the least significant bits of the image's pixel values to embed the secret message. By altering these bits, the visual changes to the image are imperceptible to the human eye, ensuring the hidden message remains concealed.
-
-Limitations
-
-Message Length: Ensure the image size is sufficient to embed the entire message.
-
-Security: While the script includes basic password protection, for enhanced security, consider implementing more advanced encryption methods.
-
-
-License
 
 This project is licensed under the MIT License.
